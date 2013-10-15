@@ -21,3 +21,4 @@ end
 gem 'jquery-rails'
 gem 'faker'
 gem 'devise', '~> 3.1.0'
+gem 'cancan'
