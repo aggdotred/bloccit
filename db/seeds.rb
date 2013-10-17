@@ -39,7 +39,7 @@ end
 u = User.new(
   name: 'Admin User',
   email: 'admin@example.com',
-  password: 'hellowworld',
+  password: 'helloworld',
   password_confirmation: 'helloworld')
 u.skip_confirmation!
 u.save
