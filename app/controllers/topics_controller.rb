@@ -19,7 +19,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.find(params[:topic])
+    @topic = Topic.new(params[:topic])
     authorize! :create, @topic, message: "You need to be an admin to do that."
     if @topic.save
       flash[:notice] = "Topic was saved successfully."
