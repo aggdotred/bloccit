@@ -19,5 +19,5 @@ config/initializers/setup_mail.rb
 # Ignore application configuration
 /config/application.yml
 
-# Carrierwave images and avatars
+# Carrierwave images and avatarsv 
 public/uploads
