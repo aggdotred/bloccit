@@ -1,14 +1,13 @@
 <h1><%= @topic.name %></h1>
 
-<% if can? :update, @topic %>
-  <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-primary btn-mini'%>
-<% end %>
+
 
 <div class="row">
-  <div class="span8">
+  <div class="span8">  
     <p class="lead"><%= @topic.description %></p>
     <% @posts.each do |post| %>
       <div class="media">
+        <%= render partial: 'votes/voter', locals: { topic: @topic, post: post } %>
         <div class="media-body">
           <h4 class="media-heading">
             <%= link_to (markdown post.title), [@topic, post] %>
